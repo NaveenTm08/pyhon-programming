@@ -1,0 +1,36 @@
+# import importfunction 
+
+# importfunction.add(10,20)
+
+# importfunction.userdata()
+
+# importfunction.calc("7")
+
+
+# import importfunction as al
+# a = True
+# while a:
+#     z = input('enter your choice')
+#     if z =="x":
+#         a = False
+#     else:
+#         al.calc(z)
+
+
+from importfunction import calc,userdata
+
+calc("/")
+
+userdata()
+
+
+from importfunction import *
+def add(a,b,c):
+    print(a+b+c)
+# calc("*")
+
+# userdata()
+
+add(10,20,30)
+
+
