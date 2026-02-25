@@ -212,23 +212,66 @@
 # alto.add("alto 800",137,350000)
 # alto.show()
 
-class Employee():
-    def add(self,name,salary,joindate):
+# class Employee():
+#     def add(self,name,salary,joindate):
+#         self.name = name
+#         self.salary = salary
+#         self.joindate = joindate
+#     def show(self):
+#         print("name",self.name)
+#         print("salary:",self.salary)
+#         print("experience:",2026-self.joindate)
+
+
+
+
+
+# person1 = Employee()
+# person1.add("sooraj",5000,2020)
+# person1.salary=8000
+# person1.show()
+# print()
+
+# class Employee():
+#     def __init__(self,name,place,salary):
+#         self.name=name
+#         self.place=place
+#         self.salary=salary
+#     def show(self):
+#         print("name",self.name)
+#         print("place",self.place)
+#         print("salary",self.salary)
+
+
+# a = Employee("naveen","thrissur",20000)
+# a.salary = 25000
+
+# a.show()
+# a.place = "vadkanjery"
+# a.show()
+
+class Bank():
+    def __init__(self,name,acc):
         self.name = name
-        self.salary = salary
-        self.joindate = joindate
-    def show(self):
+        self.acc = acc
+        self.bal = 0
+    def deposit(self,amount):
+        self.bal += amount
+    def withdraw(self,amount):
+        self.bal -= amount
+    def balance(self):
         print("name",self.name)
-        print("salary:",self.salary)
-        print("experience:",2026-self.joindate)
+        print("acc",self.acc)
+        print("balance:",self.bal)
 
 
+naveen = Bank("naveen",6790)
+naveen.deposit(2000)
+naveen.balance()
 
+naveen.withdraw(500)
+naveen.balance()
 
+naveen.bal = 100000000
 
-person1 = Employee()
-person1.add("sooraj",5000,2020)
-person1.salary=8000
-person1.show()
-print()
-
+naveen.balance()
