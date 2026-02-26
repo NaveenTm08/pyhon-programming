@@ -149,9 +149,18 @@
 # b=list(map(lambda x:x**3 , a))
 # print(b)
 
-# filter------------
-# reduce-----------
+# filter-------------------
+# a = [1,2,3,4,5,6,7,8,10,11,12,13,14,15]
+# b = list(filter(lambda x:x%2==0,a))
+# print(b)
 
+
+# reduce----------------------
+
+# from functools import reduce
+# a = [1,2,3,4,5,]
+# b = reduce((lambda x,y:x+y),a)
+# print(b)
 
 # object orient programming
 # -----------------------------
@@ -250,28 +259,125 @@
 # a.place = "vadkanjery"
 # a.show()
 
-class Bank():
-    def __init__(self,name,acc):
-        self.name = name
-        self.acc = acc
-        self.bal = 0
-    def deposit(self,amount):
-        self.bal += amount
-    def withdraw(self,amount):
-        self.bal -= amount
-    def balance(self):
-        print("name",self.name)
-        print("acc",self.acc)
-        print("balance:",self.bal)
+# class Bank():
+#     def __init__(self,name,acc):
+#         self.name = name
+#         self.acc = acc
+#         self.__bal = 0 #private
+#     def deposit(self,amount):
+#         self.__bal += amount
+#     def withdraw(self,amount):
+#         self.__bal -= amount
+#     def balance(self):
+#         print("name",self.name)
+#         print("acc",self.acc)
+#         print("balance:",self.__bal)
 
 
-naveen = Bank("naveen",6790)
-naveen.deposit(2000)
-naveen.balance()
 
-naveen.withdraw(500)
-naveen.balance()
+# naveen = Bank("naveen",6790)
+# naveen.deposit(2000)
+# naveen.balance()
 
-naveen.bal = 100000000
+# naveen.withdraw(500)
+# naveen.balance()
 
-naveen.balance()
+# naveen.__bal = 1000000
+
+# naveen.balance()
+
+# class Student():
+#     def __init__(self,name,age):
+#         self.name = name # public
+#         self._age = age
+
+
+# class SubStudent(Student):
+#     def show(self):
+#         print("name:",self.name)
+#         print("age:",self._age)# protected
+
+
+# s = SubStudent('rayees',24)
+
+# s._age = 30
+# s.show()
+
+
+# class Student():
+#     def __init__(self,Name,Age):
+#         self.Name = Name
+#         self.__Age = Age 
+        
+#     def __display(self):
+#         print("Name:",self.Name)
+#         print("Age:",self.Age)
+
+#     def shw(self):
+        # self.__display()
+    
+
+# class substudent(Student):
+#     def show(self):
+#         print("Name:",self.Name)
+#         print("Age:",self.Age)
+
+# a= Student("kiran",30)
+# a.shw()
+
+
+# polymorphisam
+
+
+
+
+
+
+
+
+
+# INHERITANCE
+# ------------------------
+# single level inheritance
+# class student():
+#     def __init__(self,Name,Age):
+#         self.Name = Name
+#         self.Age = Age
+#     def show(self):
+#         print("Name:",self.Name)
+#         print("Age:",self.Age)
+
+# class std(student):
+#     pass
+
+# c = std("Naveen",20)
+# c.show()
+
+
+# MULTI level INHERITANCE
+
+class student():
+    def __init__(self,Name,Class):
+        self.Name = Name
+        self.Class = Class
+
+class course(student):
+    def courses(self,c_name):
+        self.c_name = c_name
+    
+
+    
+class depatment(course):
+    def adddep(self,dname):
+        self.dname = dname
+
+    def show(self):
+        print("Name:",self.Name)
+        print("Class:",self.Class)
+        print("c_name:",self.c_name)
+        print("dname:",self.dname)
+
+a = depatment("hari",9)
+a.courses("python")
+a.adddep("IT")
+a.show()

@@ -67,6 +67,6 @@
 a = int(input("enter the number"))
 i=1
 for i in range(a):
-    print(" "*a," *"*i)
+    print(" "*a," *" *i)
 a=-1
 i=1
