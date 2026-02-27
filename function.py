@@ -356,28 +356,95 @@
 
 # MULTI level INHERITANCE
 
-class student():
-    def __init__(self,Name,Class):
-        self.Name = Name
-        self.Class = Class
+# class student():
+#     def __init__(self,Name,Class):
+#         self.Name = Name
+#         self.Class = Class
 
-class course(student):
-    def courses(self,c_name):
-        self.c_name = c_name
+# class course(student):
+#     def courses(self,c_name):
+#         self.c_name = c_name
     
 
     
-class depatment(course):
-    def adddep(self,dname):
-        self.dname = dname
+# class depatment(course):
+#     def adddep(self,dname):
+#         self.dname = dname
 
+#     def show(self):
+#         print("Name:",self.Name)
+#         print("Class:",self.Class)
+#         print("c_name:",self.c_name)
+#         print("dname:",self.dname)
+
+# a = depatment("hari",9)
+# a.courses("python")
+# a.adddep("IT")
+# a.show()
+
+# multiple inheritance
+# -----------------------
+
+# class Student():
+#     def add(self,name,age):
+#         self.name = name
+#         self.age = age
+# class Toppers():
+#     def add1(self,score):
+#         self.score = score
+
+# class Details(Toppers,Student):
+#     def show(self):
+#         print("name",self.name)
+#         print("age",self.age)
+#         print("score",self.score)
+# s = Details()
+# s.add("rahul",20)
+# s.add1(200)
+# s.show()
+
+
+# class A():
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+# class B(A):
+#     def display(self):
+#         print("name",self.name)
+#         print("age",self.age)
+# class B(A):
+#     def show(self):
+#         print("name",self.name)
+#         print("age",self.age)
+
+# a = B(name="hari",age=40)
+
+# a.display()
+
+# HYBRID INHERITANCE
+# -----------------------
+class Person():
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+class Empolyee(Person):
+    def role(self,job):
+        self.job = job
+
+class Project ():
+    def add(self,p_name):
+        self.p_name = p_name
+
+class Team(Project,Empolyee):
     def show(self):
-        print("Name:",self.Name)
-        print("Class:",self.Class)
-        print("c_name:",self.c_name)
-        print("dname:",self.dname)
-
-a = depatment("hari",9)
-a.courses("python")
-a.adddep("IT")
-a.show()
+        print("name",self.name)
+        print("age",self.age)
+        print("job",self.job)
+        print("p_name",self.p_name)
+s = Team(name="naveen",age=18)
+s.add(p_name="kuku")
+s.role(job="driver")
+s.show()
+    

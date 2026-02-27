@@ -64,9 +64,15 @@
     #     i = int(input("enter the second number:"))
     #     print(h*i)
 
-a = int(input("enter the number"))
-i=1
-for i in range(a):
-    print(" "*a," *" *i)
-a=-1
-i=1
+# a = int(input("enter the number"))
+# for i in range(a):
+#     print(" "*a," *"*i)
+#     a-=1
+
+
+a = int (input("enter the choose","+"|"-"|"*"|"/"))
+match a:
+    case "+":
+        b = int(input("enter the first number"))
+        c = int(input("enter the second number"))
+        print(b+c)
