@@ -70,9 +70,15 @@
 #     a-=1
 
 
-a = int (input("enter the choose","+"|"-"|"*"|"/"))
+a = input("enter the choose")
+b = int(input("enter the first number"))
+c = int(input("enter the second number"))
 match a:
     case "+":
-        b = int(input("enter the first number"))
-        c = int(input("enter the second number"))
         print(b+c)
+    case "-":
+        print(b-c)
+    case "*":
+        print(b*c)
+    case "/":
+        print(b/c)

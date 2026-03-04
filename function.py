@@ -339,6 +339,8 @@
 # INHERITANCE
 # ------------------------
 # single level inheritance
+# ---------------------------
+
 # class student():
 #     def __init__(self,Name,Age):
 #         self.Name = Name
@@ -424,27 +426,61 @@
 
 # HYBRID INHERITANCE
 # -----------------------
-class Person():
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+# class Person():
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
 
-class Empolyee(Person):
-    def role(self,job):
-        self.job = job
+# class Empolyee(Person):
+#     def role(self,job):
+#         self.job = job
 
-class Project ():
-    def add(self,p_name):
-        self.p_name = p_name
+# class Project ():
+#     def add(self,p_name):
+#         self.p_name = p_name
 
-class Team(Project,Empolyee):
-    def show(self):
-        print("name",self.name)
-        print("age",self.age)
-        print("job",self.job)
-        print("p_name",self.p_name)
-s = Team(name="naveen",age=18)
-s.add(p_name="kuku")
-s.role(job="driver")
-s.show()
+# class Team(Project,Empolyee):
+#     def show(self):
+#         print("name",self.name)
+#         print("age",self.age)
+#         print("job",self.job)
+#         print("p_name",self.p_name)
+# s = Team(name="naveen",age=18)
+# s.add(p_name="kuku")
+# s.role(job="driver")
+# s.show()
     
+# POLYMORPHISM
+# ---------------
+# class Calc():
+#     def add(self,a=0,b=0):
+#         print(a+b)
+# a=Calc()
+# a.add(1,2,5)
+
+# class Calc():
+#     def add(self,a=0,*args):
+#         for i in args:
+#             a += i
+#         print(a)
+# n = Calc()
+# n.add(10,30,40,50,60)
+
+# class Animal():
+#     def show(self):
+#         print("some generic sounds")
+# class Dog():
+#     def show(self):
+#         print("bark")
+# class Cat():
+#     def show(self):
+#         print("meow")
+# a = Animal()
+# a.show()
+
+# b = Dog()
+# b.show()
+
+# c = Cat()
+# c.show()
+
