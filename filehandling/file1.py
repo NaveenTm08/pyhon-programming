@@ -13,7 +13,7 @@
 # print(a)
 # f.close()
 
-import csv
+# import csv
 
 # data = [['kiran','palakad'],['thrissur','ajay'],['malapuram','vijay']]
 # f = open('demo1.csv','w',newline='')
@@ -22,11 +22,11 @@ import csv
 # f.close()
 
 
-file = open("demo1.csv","r",newline="")
-w = csv.reader(file)
-for i in w:
-    print("name:",i[0])
-    print("place:",i[1])
+# file = open("demo1.csv","r",newline="")
+# w = csv.reader(file)
+# for i in w:
+#     print("name:",i[0])
+#     print("place:",i[1])
 
 # output
 
@@ -36,3 +36,21 @@ for i in w:
 # place: ajay
 # name: malapuram
 # place: vijay
+
+
+# json
+# data = {"name":"naveen","age":"20","place":"thrissur"}
+import json
+# file = open("data.json","w")
+# json.dump(data,file)
+# file.close()
+
+f = open ("data.json","r")
+a = json.load(f)
+print(a)
+
+# output
+
+# {'name': 'naveen', 'age': '20', 'place': 'thrissur'}
+
+
