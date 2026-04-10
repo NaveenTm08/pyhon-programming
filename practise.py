@@ -70,15 +70,31 @@
 #     a-=1
 
 
-a = input("enter the choose")
-b = int(input("enter the first number"))
-c = int(input("enter the second number"))
-match a:
-    case "+":
-        print(b+c)
-    case "-":
-        print(b-c)
-    case "*":
-        print(b*c)
-    case "/":
-        print(b/c)
+# a = input("enter the choose")
+# b = int(input("enter the first number"))
+# c = int(input("enter the second number"))
+# match a:
+#     case "+":
+#         print(b+c)
+#     case "-":
+#         print(b-c)
+#     case "*":
+#         print(b*c)
+#     case "/":
+#         print(b/c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
